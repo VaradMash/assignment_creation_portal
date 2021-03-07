@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Prashikshan</string>
+    <string name="app_title">प्रशिक्षण </string>
+    <string name="remember_me">Remember Me</string>
+    <string name="sign_in">Sign In</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="not_registered_sign_up">Not Registered? Sign Up</string>
+    <string name="exit_message">Are you sure you want to Exit?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="usericon">User Icon</string>
+    <string name="username">Username</string>
+    <string name="institution">Institution</string>
+    <string name="class_name">Class</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="subject">Subject</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="sign_up_prompt">Already Registered? Sign In</string>
+    <string name="my_profile">My Profile</string>
+    <string name="current_assignments">Current Assignments</string>
+    <string name="log_out">Log Out</string>
+    <string name="exit">Exit</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="update_profile">Update Profile</string>
+    <string name="update">Update</string>
+    <string name="my_assignments">Assignments alloted</string>
+    <string name="assignment">Assignment</string>
+    <string name="new_assignment">New Assignment</string>
+</resources>

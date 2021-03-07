@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Menu Resource file -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_assignments"
+            android:icon="@drawable/assignment_image"
+            android:title="@string/current_assignments" />
+
+        <item
+            android:id="nav_new_assignment"
+            android:icon="@drawable/new_assignment"
+            android:title="@string/new_assignment"/>
+
+        <item
+            android:id="@+id/nav_myProfile"
+            android:icon="@drawable/profile_icon"
+            android:title="@string/my_profile" />
+
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/log_out_icon"
+            android:title="@string/log_out" />
+
+        <item
+            android:id="@+id/nav_exit"
+            android:icon="@drawable/exit_icon"
+            android:title="@string/exit"/>
+    </group>
+
+</menu>
