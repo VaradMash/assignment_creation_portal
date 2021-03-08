@@ -1,5 +1,6 @@
 package com.example.prashikshan;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,12 +13,12 @@ import androidx.annotation.Nullable;
 
 import java.util.List;
 
-public class AssignmentList extends ArrayAdapter<Faculty>
+public class AssignmentList extends ArrayAdapter<Assignment>
 {
     private Activity context;
-    private List<Faculty> assignmentList;
+    private List<Assignment> assignmentList;
 
-    public AssignmentList(Activity context, List<Faculty> assignmentList)
+    public AssignmentList(Activity context, List<Assignment> assignmentList)
     {
         super(context, R.layout.assignments_list_layout, assignmentList);
         this.context = context;
@@ -28,11 +29,12 @@ public class AssignmentList extends ArrayAdapter<Faculty>
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         LayoutInflater layoutInflater = context.getLayoutInflater();
-        View assignmentListView = layoutInflater.inflate(R.layout.assignments_list_layout, null, true);
+        @SuppressLint("ViewHolder") View assignmentListView = layoutInflater.inflate(R.layout.assignments_list_layout, null, true);
         TextView tvAssignment = (TextView)assignmentListView.findViewById(R.id.tvAssignment);
-
-        Faculty faculty = assignmentList.get(position);
-        tvAssignment.setText(faculty.getUsername());
+        TextView tvClass = (TextView)assignmentListView.findViewById(R.id.tvClass);
+        Assignment assignment = assignmentList.get(position);
+        tvAssignment.setText(assignment.getAssignmentTitle());
+        tvClass.setText(assignment.getClass_name());
         return assignmentListView;
     }
 }

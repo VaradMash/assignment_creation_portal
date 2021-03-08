@@ -12,4 +12,11 @@
         android:text="@string/assignment"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
+    <TextView
+        android:id="@+id/tvClass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/assignment"/>
+
 </LinearLayout>

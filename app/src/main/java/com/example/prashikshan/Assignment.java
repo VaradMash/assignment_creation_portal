@@ -6,6 +6,7 @@ public class Assignment
     private String problemStatement;
     private String class_name;
     private String institution;
+    private String subject;
 
     public Assignment()
     {
@@ -14,12 +15,13 @@ public class Assignment
          */
     }
 
-    public Assignment(String assignmentTitle, String problemStatement, String class_name, String institution)
+    public Assignment(String assignmentTitle, String problemStatement, String class_name, String institution, String subject)
     {
         this.assignmentTitle = assignmentTitle;
         this.problemStatement = problemStatement;
         this.class_name = class_name;
         this.institution = institution;
+        this.subject = subject;
     }
 
     public String getAssignmentTitle() {
@@ -36,5 +38,9 @@ public class Assignment
 
     public String getInstitution() {
         return institution;
+    }
+
+    public String getSubject() {
+        return subject;
     }
 }

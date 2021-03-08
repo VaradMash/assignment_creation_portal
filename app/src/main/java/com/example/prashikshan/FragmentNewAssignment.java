@@ -27,6 +27,7 @@ public class FragmentNewAssignment extends Fragment
     EditText etTitle, etProblemStatement;
     Button btnAssign;
     Faculty current_faculty;
+    DatabaseReference assignmentReference;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -35,6 +36,7 @@ public class FragmentNewAssignment extends Fragment
         etTitle = (EditText)view.findViewById(R.id.etTitle);
         etProblemStatement = (EditText)view.findViewById(R.id.etProblemStatement);
         btnAssign = (Button)view.findViewById(R.id.btnAssign);
+        assignmentReference = FirebaseDatabase.getInstance().getReference().child("Assignments");
 
         btnAssign.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,22 +58,10 @@ public class FragmentNewAssignment extends Fragment
                 }
                 else
                 {
-                    Assignment assignment = new Assignment(title, problemStatement, current_faculty.getClass_name(), current_faculty.getInstitution());
+                    Assignment assignment = new Assignment(title, problemStatement, current_faculty.getClass_name(), current_faculty.getInstitution(), current_faculty.getSubject());
                     String record_name = current_faculty.getSubject() + "_" + title;
-                    DatabaseReference assignmentReference = FirebaseDatabase.getInstance().getReference().child("Assignments");
-                    assignmentReference.child(current_faculty.getInstitution()).child(current_faculty.getClass_name()).child(record_name).setValue(assignment)
-                            .addOnCompleteListener(new OnCompleteListener<Void>() {
-                                @Override
-                                public void onComplete(@NonNull Task<Void> task) {
-                                    if(task.isSuccessful())
-                                    {
-                                        Toast.makeText(getContext(), "Assignment posted !", Toast.LENGTH_SHORT).show();
-                                    }
-                                    else {
-                                        Toast.makeText(getContext(), "Error Occurred!", Toast.LENGTH_SHORT).show();
-                                    }
-                                }
-                            });
+                    assignmentReference.child(record_name).setValue(assignment);
+                    Toast.makeText(getActivity(), "Assignment Posted !", Toast.LENGTH_SHORT).show();
                 }
             }
         });
