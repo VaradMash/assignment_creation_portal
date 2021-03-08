@@ -121,11 +121,15 @@ public class UserProfile extends AppCompatActivity  implements NavigationView.On
         }
     }
 
-    @SuppressLint("NonConstantResourceId")
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch(item.getItemId())
         {
+            case R.id.nav_new_assignment:
+            {
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FragmentNewAssignment()).commit();
+                break;
+            }
             case R.id.nav_logout:
             {
                 FirebaseAuth.getInstance().signOut();

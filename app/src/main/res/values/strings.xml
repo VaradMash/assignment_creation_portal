@@ -28,4 +28,7 @@
     <string name="my_assignments">Assignments alloted</string>
     <string name="assignment">Assignment</string>
     <string name="new_assignment">New Assignment</string>
+    <string name="title">Title</string>
+    <string name="problem_statement">Problem Statement</string>
+    <string name="assign">Assign</string>
 </resources>
