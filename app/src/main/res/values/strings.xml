@@ -31,4 +31,6 @@
     <string name="title">Title</string>
     <string name="problem_statement">Problem Statement</string>
     <string name="assign">Assign</string>
+    <string name="delete_message">Confirm Delete?</string>
+    <string name="delete">Delete</string>
 </resources>

@@ -59,7 +59,7 @@ public class FragmentNewAssignment extends Fragment
                 else
                 {
                     Assignment assignment = new Assignment(title, problemStatement, current_faculty.getClass_name(), current_faculty.getInstitution(), current_faculty.getSubject());
-                    String record_name = current_faculty.getSubject() + "_" + title;
+                    String record_name = current_faculty.getInstitution() + "_" + current_faculty.getSubject() + "_" + title;
                     assignmentReference.child(record_name).setValue(assignment);
                     Toast.makeText(getActivity(), "Assignment Posted !", Toast.LENGTH_SHORT).show();
                 }

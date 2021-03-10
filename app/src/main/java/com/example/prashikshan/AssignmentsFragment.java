@@ -74,7 +74,7 @@ public class AssignmentsFragment extends Fragment {
                     for(DataSnapshot assignment: task.getResult().getChildren())
                     {
                         current_assignment = assignment.getValue(Assignment.class);
-                        if(current_assignment.getInstitution().equals(current_user.getInstitution()) && current_assignment.getClass_name().equals(current_user.getClass_name()))
+                        if(current_assignment.getInstitution().equals(current_user.getInstitution()) && current_assignment.getClass_name().equals(current_user.getClass_name()) && current_assignment.isActive())
                         {
                             assignmentList.add(current_assignment);
                         }
@@ -91,6 +91,7 @@ public class AssignmentsFragment extends Fragment {
                 else
                 {
                     Toast.makeText(getActivity(), "No Assignments found !", Toast.LENGTH_SHORT).show();
+                    assignmentsProgressBar.setVisibility(View.GONE);
                 }
             }
         });

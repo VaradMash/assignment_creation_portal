@@ -7,6 +7,7 @@ public class Assignment
     private String class_name;
     private String institution;
     private String subject;
+    private boolean active;
 
     public Assignment()
     {
@@ -22,6 +23,7 @@ public class Assignment
         this.class_name = class_name;
         this.institution = institution;
         this.subject = subject;
+        this.active = true;
     }
 
     public String getAssignmentTitle() {
@@ -42,5 +44,15 @@ public class Assignment
 
     public String getSubject() {
         return subject;
+    }
+
+    public boolean isActive()
+    {
+        return(active == true);
+    }
+
+    public void setActive(boolean active)
+    {
+        this.active = active;
     }
 }

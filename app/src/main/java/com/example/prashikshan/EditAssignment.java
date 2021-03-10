@@ -73,7 +73,7 @@ public class EditAssignment extends AppCompatActivity {
                 }
                 else
                 {
-                    String record_name = subject + "_" + title;
+                    String record_name = institution + "_" + subject + "_" + title;
                     Assignment assignment = new Assignment(title, problem_statement, class_name, institution, subject);
                     mDatabase.child(record_name).setValue(assignment)
                     .addOnCompleteListener(new OnCompleteListener<Void>() {
