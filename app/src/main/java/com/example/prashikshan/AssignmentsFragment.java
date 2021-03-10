@@ -74,7 +74,7 @@ public class AssignmentsFragment extends Fragment {
                     for(DataSnapshot assignment: task.getResult().getChildren())
                     {
                         current_assignment = assignment.getValue(Assignment.class);
-                        if(current_assignment.getInstitution().equals(current_user.getInstitution()) && current_assignment.getClass_name().equals(current_user.getClass_name()) && current_assignment.isActive())
+                        if(current_assignment.getInstitution().equals(current_user.getInstitution()) && current_assignment.getClass_name().equals(current_user.getClass_name()) && current_assignment.isActive() && current_assignment.getSubject().equals(current_user.getSubject()))
                         {
                             assignmentList.add(current_assignment);
                         }
