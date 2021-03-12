@@ -21,7 +21,7 @@ This repository contains an Android application for assignment creation built fo
 -> Delete a particular assignment.
 
 
-## Technincal Specifications
+## Technical Specifications
 
 1. Front End Development:
 
